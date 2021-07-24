@@ -1,54 +1,56 @@
 html {
 	font-size: 16px;
 }
+
 body {
-	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-family: 'Montserrat', Helvetica, Arial,  sans-serif;
+	font-size: 1em;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-content: center;
 }
 
-.container{
-	max-width: 450px;
-	margin: 0 auto;
+.container {
+	max-width: 1200px;
+	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction:column;
+	flex-flow: row wrap;
 }
 
 h1,
 h2,
-h3 {
+h3{
 	color: black;
 	text-transform: uppercase;
 	font-weight: 700;
 }
 h1 {
-	font-size: 2em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-bottom: 3px solid #77a466;	
-	width: 100%;
+	font-size: 1.875em;
 }
 h2 {
-	font-size: 1em;
+	font-size: 1.125em;
+	color: #77a466;
 }
 h3 {
 	font-size: .75em;
 }
 
 p {
-	font-size: 1em;
+	font-size: 0.875em;
 	line-height: 21px;
-    padding: 0 30px;
+}
+
+ul {
+	margin: 0;
 }
 
 /*The widths are in a percentage!*/
 header {
 	width: 100%;
-	margin: 0 auto;
+	border-bottom: 3px solid #77a466;
+	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -57,15 +59,18 @@ header {
 
 header h1 {
 	margin: 0;
-	padding: 38px 0;
+	padding: 38px 20px 20px 20px;
+	width: 100%;
+	border-bottom: 3px solid #77a466;
 }
+
 header h1 span {
 	color: #77a466;
-	padding-right: 10px;
 }
 
 header nav {
-	padding: 46px 0;
+	padding: 20px 0;
+	width: 100%;
 }
 header nav ul {
 	margin: 0;
@@ -73,14 +78,12 @@ header nav ul {
 }
 header nav ul li {
 	text-transform: uppercase;
+	list-style: none;
+	font-size: 0.875em;
 	font-weight: 700;
-	font-size: 1em;
-	padding: 5px 0 5px 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding: 10px 0;
 }
-header nav ul li a{
+header nav ul li a {
 	text-decoration: none;
 	color:#77a466;
 }
@@ -88,27 +91,18 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: nowrap;
-	width: 100%;
-	flex-direction:column;
+	flex-flow: row wrap;
 }
-.main-image {
-	height: auto;
-	width: 100%;	
-	border-top: 3px solid #77a466;
-}
+
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
-	height: auto;
-}
+
 .main-title h2 {
 	text-align: left;
 	padding: 5px 0;
@@ -117,40 +111,19 @@ header nav ul li a{
 .main-title p {
 	padding: 0;
 	font-size: 1em;
-	line-height: 25px;
+	line-height: 1.5625;
 }
 
 .section-one,
 .section-two,
 .section-three {
 	width: 100%;
-	height: auto;
-	border-top: 1px solid #eee;	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction:column;
-}
-
-.section-one h3 {
-	padding: 10px 0;
-}
-
-.section-two {	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.section-two h3,
-.section-three h3 {
-	padding: 10px 30px;
+	border-top: 1px solid #eee;
 }
 
 .menu {
 	list-style: none;
 	padding: 0;
-	flex-direction:column;
 }
 .menu li {
 	padding: 10px 0;
@@ -160,24 +133,74 @@ header nav ul li a{
 .reviews {
 	color: #333;
 	font-size: 1em;
-	line-height: 21px;
+	line-height: 1.3125em;
 }
 
 .address {
 	font-size: 1em;
-	line-height: 24px;
+	line-height: 1.5em;
 }
 
 /*The widths are in a percentage!*/
 footer {
-	width: 100%;
-	border-top: 1px solid #eee;
-	margin: 0 auto;
+	border-top: 3px solid #eee;
 	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	width: 100%;
 }
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 1em;
+	font-size: 0.875em;
+}
+
+/* Tablet styles here*/
+
+
+@media only screen and (min-width:768px) {
+	.bottom-section {
+		justify-content: space-between;
+		align-items: flex-start;
+		border-top: 1px solid #eee;
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		border-top: none;
+		flex-basis: 30%;
+	}
+	.section-two {
+		border-right: 1px solid rgb(26, 24, 24);
+		border-left: 1px solid #eee;
+		padding: 0 20px;
+	}
+}
+
+/* Desktop styles here*/
+
+@media only screen and (min-width: 1200px) {
+
+	header {
+	justify-content: space-between;
+}
+
+	header h1 {
+		width: 30%;
+		padding: 0;
+		border-bottom: none;
+		text-align: left;
+	}
+
+	header nav {
+		width: 40%;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
 }
